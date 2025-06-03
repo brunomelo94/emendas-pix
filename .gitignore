@@ -1,2 +1,6 @@
 .env
 .venv
+.rar
+.zip
+rar_files
+.unused
