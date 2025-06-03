@@ -1,0 +1,20 @@
+# Manipulação e análise de dados
+pandas>=1.5.0
+numpy>=1.21.0
+
+# Visualização de dados
+matplotlib>=3.5.0
+seaborn>=0.11.0
+
+# Machine Learning e clusterização
+scikit-learn>=1.0.0
+
+# Modelagem estatística
+statsmodels>=0.13.0
+
+# Modelagem multinível
+pymer4>=0.7.0
+
+# Suporte adicional
+scipy>=1.7.0
+joblib>=1.1.0
