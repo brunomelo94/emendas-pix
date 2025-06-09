@@ -82,8 +82,12 @@ def load_ibge_indicators(densidade_path: str, escolar_path: str, idhm_path: str,
 def integrate_dados(emendas: pd.DataFrame, resultados: pd.DataFrame, ibge: pd.DataFrame) -> pd.DataFrame:
     """Integrate PIX amendments, election results and IBGE indicators."""
     df = resultados.merge(ibge, on="municipio", how="left")
-    df = df.merge(emendas[["municipio", "Valor"]].groupby("municipio").sum().reset_index(), on="municipio", how="left")
-    df["Valor"].fillna(0, inplace=True)
+    emendas_agg = (
+        emendas.groupby("municipio", as_index=False)["Valor"].sum()
+        .rename(columns={"Valor": "valor_pix_total"})
+    )
+    df = df.merge(emendas_agg, on="municipio", how="left")
+    df["valor_pix_total"].fillna(0, inplace=True)
     return df
 
 
