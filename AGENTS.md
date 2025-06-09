@@ -2,6 +2,36 @@
 
 This Agents.md file provides comprehensive guidance for OpenAI Codex and other AI agents working with this codebase.
 
+## Project overview
+
+**Title:** Special transfers (“Emendas PIX”) and municipal electoral performance in 2024: a multilevel approach
+
+**Background:**  
+Introduced by Constitutional Amendment 105/2019, “Emendas PIX” are mandatory, rapid federal transfers that deputies allocate directly to municipalities. In 2024, these transfers totaled R$ 4 billion (part of R$ 28.8 billion in federal voluntary transfers), raising questions about transparency, clientelism, and the political criteria behind budget allocations.
+
+**Objective:**  
+Assess whether the per-capita volume of “Emendas PIX” allocated by federal deputies is associated with higher re-election probabilities or improved electoral performance of same-party mayors in the 2024 municipal elections.
+
+**Data sources:**  
+- **CGU / Transparency Portal:** Annual “Emendas PIX” amounts per municipality (2020–2024)  
+- **TSE:** 2024 municipal election results and re-election status  
+- **IBGE:** Socio-economic indicators by municipality (IDHM, GDP per capita, population density, schooling rate)
+
+**Methodology:**  
+1. **Data extraction & preprocessing:**
+   – Load and clean datasets using Pandas and NumPy  
+2. **Exploratory analysis & clustering:**  
+   – Visualize distributions and correlations; apply k-means to group municipalities by socio-economic profiles  
+3. **Multilevel modeling:**  
+   – Build a stepwise hierarchical model (null model, random intercept, random slope, full model) to estimate the effect of PIX transfers per capita on electosral outcomes, controlling for party and socio-economic clusters  
+
+**Tools & libraries:**  
+Python (pandas, NumPy, matplotlib, seaborn), scikit-learn, statsmodels, Pymer4
+
+**Expected outcomes:**  
+Identification of significant associations between “Emendas PIX” per capita and mayoral electoral performance, offering evidence on the political use of budget transfers and informing debates on transparency and clientelistic practices.  
+
+
 ## Project Structure for OpenAI Codex Navigation
 
 - `/notebooks`: Jupyter notebooks for data analysis and exploration
