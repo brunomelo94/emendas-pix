@@ -18,3 +18,4 @@ pymer4>=0.7.0
 # Suporte adicional
 scipy>=1.7.0
 joblib>=1.1.0
+unidecode>=1.4
