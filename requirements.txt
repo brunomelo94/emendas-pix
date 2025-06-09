@@ -19,3 +19,8 @@ pymer4>=0.7.0
 scipy>=1.7.0
 joblib>=1.1.0
 unidecode>=1.4
+
+
+# FastAPI para criação de APIs
+fastapi>=0.70.0
+uvicorn>=0.15.0

@@ -6,3 +6,4 @@ rar_files
 .unused
 .xlsx
 .json
+__pycache__
