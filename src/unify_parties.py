@@ -11,6 +11,8 @@ from unidecode import unidecode
 
 from party_service import fetch_party
 from senado_party_service import fetch_senator_parties
+from wikipedia_party_service import fetch_party_from_wikipedia
+
 
 
 logger = logging.getLogger(__name__)
@@ -68,9 +70,20 @@ def build_party_mapping(names: list[str]) -> Dict[str, str]:
     for name in names:
         norm = _normalize(name)
         party = mapping.get(norm)
+        wiki_party = None
+        if not party or party == "UNKNOWN":
+            wiki_party = fetch_party_from_wikipedia(name)
+            if wiki_party:
+                party = wiki_party
+                mapping[norm] = party
+        if (not party or party == "UNKNOWN") and not wiki_party:
+            party = fetch_party(name)
+            if party and party != "UNKNOWN":
+
         if not party:
             party = fetch_party(name)
             if party:
+
                 mapping[norm] = party
         final[name] = party or "UNKNOWN"
     return final
