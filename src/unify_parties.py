@@ -14,6 +14,7 @@ from senado_party_service import fetch_senator_parties
 from wikipedia_party_service import fetch_party_from_wikipedia
 
 
+
 logger = logging.getLogger(__name__)
 
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
@@ -78,6 +79,11 @@ def build_party_mapping(names: list[str]) -> Dict[str, str]:
         if (not party or party == "UNKNOWN") and not wiki_party:
             party = fetch_party(name)
             if party and party != "UNKNOWN":
+
+        if not party:
+            party = fetch_party(name)
+            if party:
+
                 mapping[norm] = party
         final[name] = party or "UNKNOWN"
     return final
