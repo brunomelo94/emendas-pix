@@ -48,7 +48,7 @@ def main() -> None:
     )
     parser.add_argument(
         "--mapping",
-        default="json_data/autor_partido_2024.json",
+        default="json_data/politicos_partidos_padronizado.json",
         help="JSON com mapeamento de nomes para partidos",
     )
     parser.add_argument(
