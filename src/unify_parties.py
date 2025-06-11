@@ -78,13 +78,6 @@ def build_party_mapping(names: list[str]) -> Dict[str, str]:
                 mapping[norm] = party
         if (not party or party == "UNKNOWN") and not wiki_party:
             party = fetch_party(name)
-            if party and party != "UNKNOWN":
-
-        if not party:
-            party = fetch_party(name)
-            if party:
-
-                mapping[norm] = party
         final[name] = party or "UNKNOWN"
     return final
 
