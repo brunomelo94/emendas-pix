@@ -13,9 +13,6 @@ Dados foram retirados de:
 Observações relevantes:
 
 1. Muitas prefeituras só tiveram um candidato, que obviamente ficou com 100% dos votos válidos;
-2. 
-
-
 
 ## Pontos IA para ajuste análise exploratória
 
