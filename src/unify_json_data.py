@@ -49,7 +49,6 @@ def _add_entry(mapping: Dict[str, str], canonical: Dict[str, str], name: str, pa
             canonical[alt] = name
             mapping[alt] = party
 
-
 def _load_file(path: Path, mapping: Dict[str, str], canonical: Dict[str, str]) -> None:
     """Load data from *path* and update *mapping*."""
     with path.open("r", encoding="utf-8") as f:
@@ -76,9 +75,6 @@ def build_mapping() -> tuple[Dict[str, str], Dict[str, str]]:
 
     for path in sorted(JSON_DIR.glob("*.json")):
         _load_file(path, mapping, canonical)
-
-    canonical_map = {canonical[n]: mapping[n] for n in sorted(mapping)}
-    return canonical_map, mapping
 
 
 def _build_dataset_map(normalized_map: Dict[str, str]) -> Dict[str, str]:
@@ -108,7 +104,7 @@ def main() -> None:
     with csv_out.open("w", encoding="utf-8") as f:
         json.dump(dataset_map, f, ensure_ascii=False, indent=2)
     print(f"✅ Generated {csv_out} with {len(dataset_map)} entries.")
-
+    return {canonical[n]: mapping[n] for n in sorted(mapping)}
 
 if __name__ == "__main__":
     main()
