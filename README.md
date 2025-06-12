@@ -15,3 +15,11 @@ python src/insert_parties.py \
 
 2. Execute o notebook `notebooks/09_unificar_dados.ipynb` para unificar os dados da pasta `data` em `data/dados_unificados.csv`.
 
+
+3. Gere o JSON com prefeitos eleitos em 2024 executando:
+
+```bash
+python src/build_prefeitos_json.py \
+  --csv data/dados_unificados_prefeitos_200k.csv \
+  --out json_data/prefeitos_2024.json
+```
