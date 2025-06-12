@@ -21,3 +21,4 @@ Observações relevantes:
 3. Verificar outros tipos de análises pertinentes que podemos fazer com os dados;
 4. Muitas prefeituras só tiveram um candidato, que obviamente ficou com 100% dos votos válidos, faz sentido retirar esses casos da análise, ou pelo menos destacar que eles não foram considerados, correto?
 5. Se soma de emendas PIX for 0, pode ser interessante retirar essas prefeituras?
+6. Adicionar unidades de medida onde for pertinente, como PIB per capita, densidade demográfica, etc.
