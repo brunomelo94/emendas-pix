@@ -26,6 +26,7 @@ Execute na ordem:
 | `04_analise_clusters_emendas.ipynb` | Análise de emendas por cluster socioeconômico |
 | `05_resultados_preliminares.ipynb` | Resultados preliminares (entregues ao orientador) |
 | **`06_modeling_final.ipynb`** | **Modelagem final — GEE + Multinível Linear** |
+| **`07_robustez.ipynb`** | **Análises de robustez — 7 testes metodológicos** |
 
 Notebooks antigos: `notebooks/_arquivo/`
 
@@ -68,6 +69,10 @@ Execute `03_clustering.ipynb` → gera `data/dados_com_clusters.csv`
 ### 4. Modelagem final
 
 Execute `06_modeling_final.ipynb` → gera figuras em `data/fig_*.png`
+
+### 5. Análises de robustez
+
+Execute `07_robustez.ipynb` → gera figuras em `data/fig_robustez_*.png`
 
 ---
 
