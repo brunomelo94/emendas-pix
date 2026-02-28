@@ -13,6 +13,7 @@ Dados foram retirados de:
 Observações relevantes:
 
 1. Muitas prefeituras só tiveram um candidato, que obviamente ficou com 100% dos votos válidos;
+2. Muitos municípios não receberam emendas PIX, o que pode indicar que não houve interesse ou necessidade de receber esses recursos;
 
 ## Pontos IA para ajuste análise exploratória
 
